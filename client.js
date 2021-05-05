@@ -16,13 +16,20 @@ const connect = function () {
     });
   });
 
+  // handle user input
+  const handleUserInput = (key) => {
+    if (key === '\u0003') {
+      process.exit();
+    }
+  };
+
+  // interpret incoming data as text
+  conn.setEncoding("utf8");
+
   // message if idle
   conn.on('data', (data) => {
     console.log("You ded cuz you idled");
   });
-
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
 
   return conn;
 };
