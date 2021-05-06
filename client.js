@@ -12,8 +12,6 @@ const connect = function () {
     console.log("Successfully connected to game server");
     conn.write('Name: HKB', () => {
     });
-    conn.write('Move: up', () => {
-    });
   });
 
   // interpret incoming data as text
