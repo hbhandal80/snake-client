@@ -24,6 +24,9 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     conn.write('Move: right');
   }
+  if (key === 'h') {
+    conn.write('Say: help');
+  }
 };
 stdin.on('data', handleUserInput);
 return stdin;
