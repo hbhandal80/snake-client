@@ -16,13 +16,6 @@ const connect = function () {
     });
   });
 
-  // handle user input
-  const handleUserInput = (key) => {
-    if (key === '\u0003') {
-      process.exit();
-    }
-  };
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
@@ -34,7 +27,7 @@ const connect = function () {
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
 
 /*
 "Move: up" - move up one square (unless facing down)
